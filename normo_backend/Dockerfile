@@ -1,5 +1,5 @@
-# Use Python 3.11 slim image
-FROM python:3.11-slim
+# Use Python 3.12 slim image
+FROM python:3.12-slim
 
 # Set working directory
 WORKDIR /app
@@ -13,16 +13,14 @@ RUN apt-get update && apt-get install -y \
 # Install UV package manager
 RUN pip install uv
 
-# Copy dependency files
+# Copy dependency files and source code
 COPY pyproject.toml uv.lock* ./
-
-# Install dependencies using UV
-RUN uv sync --frozen
-
-# Copy source code
 COPY src/ ./src/
 COPY arch_pdfs/ ./arch_pdfs/
 COPY vector_store/ ./vector_store/
+
+# Install dependencies using UV with Python 3.12
+RUN uv sync --frozen --python 3.12
 
 # Create necessary directories
 RUN mkdir -p /app/vector_store
@@ -35,4 +33,4 @@ ENV PYTHONPATH=/app/src
 ENV PYTHONUNBUFFERED=1
 
 # Run the application
-CMD ["uv", "run", "uvicorn", "normo_backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uv", "run", "uvicorn", "normo_backend.api.app:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -5,7 +5,7 @@ env/
 ENV/
 
 # Large PDF files
-*.pdf
+#*.pdf
 
 # Python
 __pycache__/
