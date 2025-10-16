@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./normo_backend
+      dockerfile: Dockerfile
+    container_name: normo-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app/src
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./normo_backend/vector_store:/app/vector_store
+      - ./normo_backend/arch_pdfs:/app/arch_pdfs
+    networks:
+      - normo-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./normo_frontend
+      dockerfile: Dockerfile
+    container_name: normo-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - normo-network
+    restart: unless-stopped
+
+networks:
+  normo-network:
+    driver: bridge
+
+volumes:
+  vector_store:
+  arch_pdfs:

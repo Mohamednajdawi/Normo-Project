@@ -1,0 +1,124 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+ALWAYS: Use UV for Package managment 
+
+
+Here’s a directory structure you can confidently use across most production-grade Python projects:
+
+my_project/
+├── .github/             # GitHub actions/workflows
+├── .vscode/             # Editor-specific settings (optional)
+├── docs/                # Documentation files
+├── src/                 # Source code lives here (recommended!)
+│   └── my_project/      # Actual Python package
+│       ├── __init__.py
+│       ├── config.py
+│       ├── main.py      # Entry point (CLI, API, etc.)
+│       ├── core/        # Core domain logic
+│       ├── services/    # Business logic, services
+│       ├── models/      # Pydantic/ORM models
+│       ├── api/         # REST or GraphQL routes
+│       └── utils/       # Helper functions
+├── tests/               # Unit and integration tests
+│   ├── __init__.py
+│   └── test_main.py
+├── .env                 # Environment variables
+├── pyproject.toml       # Build system & dependencies (UV is king in 2025)
+├── README.md            # Project overview
+├── .gitignore
+└── requirements.txt     # Optional (for Docker or deployment)
+
+
+1. Use the src/ Layout
+Putting your code inside a src/ folder may seem like overkill, but it prevents accidental imports and makes your testing cleaner.
+
+Why it matters:
+
+Prevents your test runner from importing the local modules instead of installed ones.
+
+Promotes better packaging and dependency isolation.
+
+With the src/ layout, your pyproject.toml should include:
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+2. Use pyproject.toml — Not setup.py
+By 2025, pyproject.toml is the standard. It centralizes configuration for building, dependency management, and linting tools.
+
+Works seamlessly with Poetry, Hatch, PDM, and other modern Python tooling.
+
+Cleaner than mixing setup.py, setup.cfg, MANIFEST.in, etc.
+
+Easier CI/CD integration.
+
+Example snippet for Poetry:
+
+[tool.poetry]
+name = "my_project"
+version = "0.1.0"
+description = "Clean Python structure example"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.110.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+3. Split Business Logic from Application Code
+This is where most Python devs mess up — they bundle everything inside the main app or route handler. Instead, separate your:
+
+core/ — domain logic, core rules, entity models
+
+services/ — interface logic like API clients, mailers, job schedulers
+
+api/ — HTTP/REST routes or CLI entry points
+
+This makes your logic:
+
+Easier to test
+
+Easier to reuse
+
+Cleaner to debug
+
+4. Keep Configs Centralized and Versioned
+Use a central config.py (or better yet, dynaconf, pydantic-settings, or dotenv) to manage settings.
+
+Example using pydantic-settings:
+
+from pydantic_settings import BaseSettings
+
+class Settings(BaseSettings):
+    db_url: str
+    redis_url: str
+    environment: str = "development"
+
+    class Config:
+        env_file = ".env"
+
+settings = Settings()
+Keeps secrets out of code
+Works in local, staging, and production
+Easily mockable in tests
+
+5. Structure Tests Like Your App
+Mimic the src/ structure inside tests/. If you have src/my_project/services/email.py, create tests/services/test_email.py.
+
+Instant mapping between app and test files
+
+Encourages focused, modular testing
+
+Easier for new devs to navigate
+
+Tip: Use pytest with plugins like pytest-cov and pytest-mock for full coverage and mocking power.
+
+6. Use .env Files for Environment Variables
+Don’t hardcode secrets. Use .env files with libraries like python-dotenv or pydantic-settings. Commit a .env.example file with sample structure for onboarding.
+
+DB_URL=postgres://user:password@localhost:5432/mydb
+REDIS_URL=redis://localhost:6379
