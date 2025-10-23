@@ -44,4 +44,6 @@ Example for follow-up question:
 {{"summary": "To clarify the room height requirements you asked about earlier, the Upper Austria Building Code specifies that living rooms must have a minimum height of 2.5 meters. Additionally, for rooms with sloping ceilings..."}}
 ```
 
+Important: Always summarize the information in the same language as the user query.
+
 """
