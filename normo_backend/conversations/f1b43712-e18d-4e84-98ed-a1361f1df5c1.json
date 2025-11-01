@@ -1,0 +1,160 @@
+{
+  "conversation_id": "f1b43712-e18d-4e84-98ed-a1361f1df5c1",
+  "user_id": null,
+  "messages": [
+    {
+      "role": "user",
+      "content": "What are the building height requirements in Austrian law?",
+      "timestamp": "2025-10-25 11:35:39.658514",
+      "agent_steps": null,
+      "pdf_names": null,
+      "source_citations": null,
+      "meta_data": null
+    },
+    {
+      "role": "assistant",
+      "content": "In Austrian law, building height requirements vary by region and building class. Key regulations include:\n\n1. **Ober\u00f6sterreichisches Raumordnungsgesetz 1994**: The height of buildings is determined by the number of stories above ground, main cornice height, or total height above the lowest point of the street level. Minimum and maximum limits can be defined within the construction site.\n\n2. **Bauordnung f\u00fcr Wien**: This regulation specifies that the maximum building height must be defined in the building plans. Specific height requirements for different building classes are as follows:\n   - **Building Class II**: Minimum 2.5 m, maximum 12 m.\n   - **Building Class III**: Minimum 9 m, maximum 16 m.\n   - **Building Class IV**: Minimum 12 m, maximum 21 m.\n   - **Building Class V**: Minimum 16 m, maximum 26 m.\n   - **Building Class VI**: Minimum height of 21 m.\n\n3. **Bautechnikgesetz 2013**: This law states that the total height of buildings and protective structures must not exceed 7 m, and for pitched roofs facing neighboring properties, the height must not exceed 3 m above the ground floor level.\n\nThese regulations emphasize the importance of adhering to local zoning laws and defining maximum heights in building plans.",
+      "timestamp": "2025-10-25 11:36:15.041420",
+      "agent_steps": [
+        "retrieve_pdfs"
+      ],
+      "pdf_names": [
+        "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+        "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Ober\u00f6sterreichische Bauordnung 1994_LGBl.Nr. 66_1994.pdf",
+        "01_Data base documents/03_OIB Richtlinien/2023/3_AT_0_0_OIB_OIB-Richtlinie 2 Brandschutz Ausgabe Mai 2023_OIB-330.2-029_23.pdf"
+      ],
+      "source_citations": [
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Ober\u00f6sterreichisches Raumordnungsgesetz 1994_LGBl.Nr. 114_1993.pdf",
+          "page": 25,
+          "paragraph": 1,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Ober\u00f6sterreichisches Raumordnungsgesetz 1994_LGBl.Nr. 114_1993.pdf_p25_c1",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Ober\u00f6sterreichisches Raumordnungsgesetz 1994_LGBl.Nr. 114_1993.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Landesrecht Ober\u00f6sterreich \nwww.ris.bka.gv.at Seite 25 von 35 \n(4) Die H\u00f6he der Geb\u00e4ude ist nach der Anzahl der Geschosse \u00fcber dem Erdboden, der \nHauptgesimsh\u00f6he oder der Gesamth\u00f6he \u00fcber dem tiefsten ..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Ober\u00f6sterreichisches Raumordnungsgesetz 1994_LGBl.Nr. 114_1993.pdf",
+          "page": 16,
+          "paragraph": 1,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Ober\u00f6sterreichisches Raumordnungsgesetz 1994_LGBl.Nr. 114_1993.pdf_p16_c1",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Ober\u00f6sterreichisches Raumordnungsgesetz 1994_LGBl.Nr. 114_1993.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Landesrecht Ober\u00f6sterreich \nwww.ris.bka.gv.at Seite 16 von 35 \n(3a) Im Gebiet f\u00fcr Gesch\u00e4ftsbauten mit einer im Fl\u00e4chenwidmungsteil festgelegten \nGesamtverkaufsfl\u00e4che von mehr als 800 m 2 sind nur Geb\u00e4..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Bautechnikgesetz 2013 \u2013  BauTG 2013_LGBl.Nr. 35_2013.pdf",
+          "page": 17,
+          "paragraph": 1,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Bautechnikgesetz 2013 \u2013  BauTG 2013_LGBl.Nr. 35_2013.pdf_p17_c1",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Bautechnikgesetz 2013 \u2013  BauTG 2013_LGBl.Nr. 35_2013.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Landesrecht Ober\u00f6sterreich \nwww.ris.bka.gv.at Seite 17 von 37 \n e) die Gesamth\u00f6he von im Abstand gelegenen Geb\u00e4uden und Schutzd\u00e4chern sowie Teilen davon \n(wie Dachgiebeln) darf 7 m nicht \u00fcbe rschreite..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "page": 64,
+          "paragraph": 1,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf_p64_c1",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Landesrecht Wien \nwww.ris.bka.gv.at Seite 64 von 103 \n b) das h\u00f6chste zul\u00e4ssige Ausma\u00df des umbaubaren Raumes der Bauwerke auf dem Bauplatz;  \n c) die maximale Geb\u00e4udeh\u00f6he oder der maximale oberste Abs..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "page": 5,
+          "paragraph": 7,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf_p5_c7",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "zur Nachbargrenze durch die Grundabteilung nicht ver\u00e4ndert wird. \n(8) Beim nachtr\u00e4glichen Einbau von Fl\u00e4chenw\u00e4rmeabgabesystemen im Zuge der Dekarbonisierung \nvon im Zeitpunkt des Inkrafttretens der Wi..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "page": 78,
+          "paragraph": 1,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf_p78_c1",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Landesrecht Wien \nwww.ris.bka.gv.at Seite 78 von 103 \n(2) Die vertikale Erschlie\u00dfung hat durch Treppen oder Rampen zu erfolgen. Wenn es auf Grund des \nVerwendungszwecks unter Bedachtnahme auf die Bauw..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "page": 66,
+          "paragraph": 1,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf_p66_c1",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Landesrecht Wien \nwww.ris.bka.gv.at Seite 66 von 103 \n(2) Bei den \u00fcber eine Geb\u00e4udetiefe von 15  m hinausragenden Teilen von Geb\u00e4uden an der Baulinie, \nStra\u00dfenfluchtlinie oder Verkehrsfluchtlinie sowi..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "page": 68,
+          "paragraph": 1,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf_p68_c1",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Landesrecht Wien \nwww.ris.bka.gv.at Seite 68 von 103 \n d) Vord\u00e4cher, Windf\u00e4nge und Abschattungsvorrichtungen; \n e) Werbezeichen, Schauk\u00e4sten und Gesch\u00e4ftsportale; \n f) Treppenhausvorbauten, Aufzugssch..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "page": 61,
+          "paragraph": 6,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf_p61_c6",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "in Bauklasse II mindestens 2,5 m, h\u00f6chstens 12 m, \nin Bauklasse III mindestens 9 m, h\u00f6chstens 16 m, \nin Bauklasse IV mindestens 12 m, h\u00f6chstens 21 m, \nin Bauklasse  V mindestens 16 m, h\u00f6chstens 26 m. ..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Bautechnikgesetz 2013 \u2013  BauTG 2013_LGBl.Nr. 35_2013.pdf",
+          "page": 7,
+          "paragraph": 1,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Bautechnikgesetz 2013 \u2013  BauTG 2013_LGBl.Nr. 35_2013.pdf_p7_c1",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Bautechnikgesetz 2013 \u2013  BauTG 2013_LGBl.Nr. 35_2013.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Landesrecht Ober\u00f6sterreich \nwww.ris.bka.gv.at Seite 7 von 37 \n2. HAUPTST\u00dcCK \nAllgemeine Bauvorschriften \n1. Abschnitt \nAllgemeine bautechnische Anforderungen \n\u00a7 3 \nAllgemeine Anforderungen \n(1) Bauwer..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "page": 5,
+          "paragraph": 9,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf_p5_c9",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "\u00dcberschreitung der bestehenden Geb\u00e4udeh\u00f6he bzw. des obersten Geb\u00e4udeabschlusses darf  jedoch \ninsgesamt nicht mehr als 45 cm betragen. \nARTIKEL Va \nDer Einheitssatz gem\u00e4\u00df \u00a7  51 Abs. 6, der am 1.  J\u00e4nn..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Ober\u00f6sterreichisches Raumordnungsgesetz 1994_LGBl.Nr. 114_1993.pdf",
+          "page": 23,
+          "paragraph": 1,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Ober\u00f6sterreichisches Raumordnungsgesetz 1994_LGBl.Nr. 114_1993.pdf_p23_c1",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Ober\u00f6sterreichisches Raumordnungsgesetz 1994_LGBl.Nr. 114_1993.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Landesrecht Ober\u00f6sterreich \nwww.ris.bka.gv.at Seite 23 von 35 \nAltbestands vorgeschrieben wird und bei der Baubeh\u00f6rde die Hinterlegung einer Bankgarantie in \nH\u00f6he der zu erwartenden Abbruchkosten noch..."
+        }
+      ],
+      "meta_data": {
+        "country": "Austria",
+        "state": "Upper Austria",
+        "legal_domain": "building_law",
+        "document_type": "Bauordnung",
+        "subject_area": "building_construction"
+      }
+    }
+  ],
+  "created_at": "2025-10-23 19:55:22.734833",
+  "updated_at": "2025-10-25 11:36:15.041557",
+  "context": {}
+}

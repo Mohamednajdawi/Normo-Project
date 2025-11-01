@@ -1,0 +1,175 @@
+{
+  "conversation_id": "314fbae0-d98a-423c-90e3-1102533257f8",
+  "user_id": null,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ich baue in Linz ein Mehrfamilienhaus mit 5 Wohnungen. Wie viele Quadratmeter Spielfl\u00e4che muss ich daf\u00fcr einplanen?",
+      "timestamp": "2025-10-29 14:21:33.464109",
+      "agent_steps": null,
+      "pdf_names": null,
+      "source_citations": null,
+      "meta_data": null
+    },
+    {
+      "role": "assistant",
+      "content": "F\u00fcr Ihr Projekt in Linz, bei dem Sie ein Mehrfamilienhaus mit 5 Wohnungen bauen, m\u00fcssen Sie mindestens **500 m\u00b2** Spielfl\u00e4che f\u00fcr einen Kinder- und Jugendspielplatz einplanen. Wenn Sie zus\u00e4tzlich einen Spielplatz f\u00fcr Kleinkinder (bis zu 6 Jahren) einrichten m\u00f6chten, sollten Sie weitere **30 m\u00b2** daf\u00fcr einplanen. Diese Anforderungen sind im Ober\u00f6sterreichischen Raumordnungsgesetz und der Spielplatzverordnung festgelegt. Es wird betont, dass ausreichend Erholungs- und Spielfl\u00e4chen in Wohnanlagen zur Verf\u00fcgung stehen m\u00fcssen, um den Bed\u00fcrfnissen der Bewohner gerecht zu werden.",
+      "timestamp": "2025-10-29 14:22:01.158685",
+      "agent_steps": [
+        "retrieve_pdfs"
+      ],
+      "pdf_names": [
+        "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Ober\u00f6sterreichische Bauordnung 1994_LGBl.Nr. 66_1994.pdf",
+        "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/2_AT_OOE_0_GE_Bautechnikgesetz 2013 \u2013 BauTG 2013_LGBl.Nr. 35_2013.pdf"
+      ],
+      "source_citations": [
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/2_AT_OOE_0_VE_Bautechnikverordnung 2013 \u2013 BauTV 2013_LGBl.Nr. 36_2013.pdf",
+          "page": 9,
+          "paragraph": 2,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/2_AT_OOE_0_VE_Bautechnikverordnung 2013 \u2013 BauTV 2013_LGBl.Nr. 36_2013.pdf_p9_c2",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/2_AT_OOE_0_VE_Bautechnikverordnung 2013 \u2013 BauTV 2013_LGBl.Nr. 36_2013.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "30 m\u00b2 Nutzfl\u00e4che \n9. Bauwerke f\u00fcr Veranstaltungen \n(Gasthauss\u00e4le, Kinos, Theater, \nKonzerth\u00e4user und dergleichen) \n \n \n5 m\u00b2 Saalnutzfl\u00e4che oder 5 Pl\u00e4tze \n10. Religi\u00f6sen Zwecken dienende \nBauwerke \n \n1...",
+          "area_measurements": [
+            "30 m\u00b2",
+            "5 m\u00b2",
+            "200 m\u00b2",
+            "10 m\u00b2",
+            "100 m\u00b2",
+            "5 m\u00b2"
+          ]
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "page": 84,
+          "paragraph": 9,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf_p84_c9",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "im S inne dieser Bestimmung bei der Schaffung von Wohnungen in bestehenden Geb\u00e4uden technisch \nunm\u00f6glich oder wirtschaftlich unzumutbar ist. \n(4) Bei Errichtung von Wohngeb\u00e4uden mit mehr als 15  Wohnu..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "page": 19,
+          "paragraph": 8,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf_p19_c8",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Geb\u00e4uden) miteinander verbunden sind und insgesamt f\u00fcr diese Nutzungen nach dem Wiener \nGaragengesetz eine Verpflichtung zur Schaffung von mehr als 30 Pflichtstellpl\u00e4tzen besteht. F\u00fcr \nEinkaufszentren..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "page": 63,
+          "paragraph": 1,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf_p63_c1",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Landesrecht Wien \nwww.ris.bka.gv.at Seite 63 von 103 \nBauplatzgrenze zu der anderen durchgehend errichtet werden. Die Beh\u00f6rde hat ein freiwilliges \nZur\u00fcckr\u00fccken einzelner Geb\u00e4udeteile hinter die Bauli..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/2_AT_OOE_0_VE_Bautechnikverordnung 2013 \u2013 BauTV 2013_LGBl.Nr. 36_2013.pdf",
+          "page": 8,
+          "paragraph": 5,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/2_AT_OOE_0_VE_Bautechnikverordnung 2013 \u2013 BauTV 2013_LGBl.Nr. 36_2013.pdf_p8_c5",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/2_AT_OOE_0_VE_Bautechnikverordnung 2013 \u2013 BauTV 2013_LGBl.Nr. 36_2013.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Bauwerke und dem daraus resultierenden voraussichtlichen Bedarf im Einzelfall von der Baubeh\u00f6rde \nfestzulegen. \n(2) F\u00fcr Bauwerke der nachstehenden Art ist, soweit der Bebauungsplan nach \u00a7 86 Abs. 1 Z ...",
+          "area_measurements": [
+            "20 m\u00b2",
+            "80 m\u00b2",
+            "80 m\u00b2"
+          ]
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "page": 67,
+          "paragraph": 3,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf_p67_c3",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Fl\u00e4chen des B auplatzes errichtet werden; die Anordnung der g\u00e4rtnerischen Ausgestaltung von \nGrundfl\u00e4chen nach \u00a7 5 Abs. 4 lit. p steht dem nicht entgegen. \n(5) Die durch Nebengeb\u00e4ude in Anspruch genom..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/2_AT_OOE_0_VE_Bautechnikverordnung 2013 \u2013 BauTV 2013_LGBl.Nr. 36_2013.pdf",
+          "page": 10,
+          "paragraph": 1,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/2_AT_OOE_0_VE_Bautechnikverordnung 2013 \u2013 BauTV 2013_LGBl.Nr. 36_2013.pdf_p10_c1",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/2_AT_OOE_0_VE_Bautechnikverordnung 2013 \u2013 BauTV 2013_LGBl.Nr. 36_2013.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Landesrecht Ober\u00f6sterreich \nwww.ris.bka.gv.at Seite 10 von 13 \nKonzerth\u00e4user und dergleichen) \n b) Sportst\u00e4tten 25 Personen bzw. 50 \nPublikumspl\u00e4tze \n c) Hallenb\u00e4der 50 Personen \n d) Freib\u00e4der 25 Pers..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "page": 63,
+          "paragraph": 3,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf_p63_c3",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "(10) Im Wohngebiet und im gemischten Baugebiet mit Ausnahme der Gesch\u00e4fts viertel und \nBetriebsbaugebiete darf bei offener, bei offener oder gekuppelter, bei gekuppelter und bei der \nGruppenbauweise d..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/2_AT_OOE_0_VE_Bautechnikverordnung 2013 \u2013 BauTV 2013_LGBl.Nr. 36_2013.pdf",
+          "page": 7,
+          "paragraph": 4,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/2_AT_OOE_0_VE_Bautechnikverordnung 2013 \u2013 BauTV 2013_LGBl.Nr. 36_2013.pdf_p7_c4",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/2_AT_OOE_0_VE_Bautechnikverordnung 2013 \u2013 BauTV 2013_LGBl.Nr. 36_2013.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "9. sonstige Geb\u00e4ude, deren Verwendungszweck die Notwendigkeit einer Vorsorge f\u00fcr eine \nelektronische Kommunikation nicht erwarten l\u00e4sst oder wenn die Erf\u00fcllung der Verpflichtungen \ngem\u00e4\u00df Abs. 2 unverh..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "page": 70,
+          "paragraph": 8,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf_p70_c8",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/01.Wien/1_AT_W_W_GE_Bauordnung f\u00fcr Wien- BO f\u00fcr Wien_LGBl. Nr. 11_1930.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "einem eigenen Eingang aus dem Freien f\u00fcr jede Wohnung bzw. Betriebseinheit.  \n(15) Wohnnutzfl\u00e4che ist die gesamte Bodenfl\u00e4che der Wohnungen abz\u00fcglich der Wandst\u00e4rken und \nder im Verlauf der W\u00e4nde befi..."
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Bautechnikgesetz 2013 \u2013  BauTG 2013_LGBl.Nr. 35_2013.pdf",
+          "page": 18,
+          "paragraph": 1,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Bautechnikgesetz 2013 \u2013  BauTG 2013_LGBl.Nr. 35_2013.pdf_p18_c1",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Bautechnikgesetz 2013 \u2013  BauTG 2013_LGBl.Nr. 35_2013.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "Landesrecht Ober\u00f6sterreich \nwww.ris.bka.gv.at Seite 18 von 37 \n\u00a7 42 \nHaupt- und Nebengeb\u00e4ude \nNebengeb\u00e4ude d\u00fcrfen die Bebauung des Bauplatzes oder des zu bebauenden  Grundst\u00fccks mit dem \nHauptgeb\u00e4ude ...",
+          "area_measurements": [
+            "100 m\u00b2"
+          ]
+        },
+        {
+          "pdf_name": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Ober\u00f6sterreichisches Raumordnungsgesetz 1994_LGBl.Nr. 114_1993.pdf",
+          "page": 14,
+          "paragraph": 2,
+          "chunk_id": "01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Ober\u00f6sterreichisches Raumordnungsgesetz 1994_LGBl.Nr. 114_1993.pdf_p14_c2",
+          "file_path": "arch_pdfs/01_Data base documents/01-02_Bundesl\u00e4nder- Gesetze und Verordnungen/04. OBER\u00d6STERREICH/1_AT_OOE_0_GE_Ober\u00f6sterreichisches Raumordnungsgesetz 1994_LGBl.Nr. 114_1993.pdf",
+          "priority": 4,
+          "priority_text": "UNKNOWN PRIORITY",
+          "relevant_content": "auf Grund ihrer Betriebstype \u00fcberwiegend w\u00e4hrend der Nachtstunden betrieben werden, sind unzul\u00e4ssig. \nDie Privatzimmervermietung im Ausma\u00df bis zu zehn Betten als h\u00e4usliche Nebenbesch\u00e4ftigung ist \nzul\u00e4..."
+        }
+      ],
+      "meta_data": {
+        "country": "Austria",
+        "state": "Upper Austria",
+        "legal_domain": "building_law",
+        "document_type": "Bauordnung",
+        "subject_area": "spatial_planning"
+      }
+    }
+  ],
+  "created_at": "2025-10-29 14:21:30.051282",
+  "updated_at": "2025-10-29 14:22:01.158995",
+  "context": {}
+}

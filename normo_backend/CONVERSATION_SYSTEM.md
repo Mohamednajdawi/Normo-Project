@@ -182,14 +182,9 @@ history = storage.get_conversation_history(conversation_id, limit=10)
 
 ## Testing
 
-Run the example script to test the conversation system:
+Test the conversation system by using the API endpoints directly or through the frontend interface.
 
-```bash
-cd normo_backend
-python example_conversation.py
-```
-
-Make sure the backend is running on `http://localhost:8000` before running the example.
+Make sure the backend is running on `http://localhost:8000`.
 
 ## Error Handling
 

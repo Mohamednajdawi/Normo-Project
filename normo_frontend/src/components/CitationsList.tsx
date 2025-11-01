@@ -258,18 +258,6 @@ const CitationsList: React.FC<CitationsListProps> = ({ citations }) => {
         ))}
       </List>
 
-      <Typography
-        variant="caption"
-        sx={{
-          color: '#8e8ea0',
-          display: 'block',
-          textAlign: 'center',
-          mt: 2,
-          fontStyle: 'italic',
-        }}
-      >
-        All citations are from official Austrian legal documents
-      </Typography>
     </Box>
   );
 };

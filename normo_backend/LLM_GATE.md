@@ -228,9 +228,6 @@ All gate decisions are logged with:
 ### Debug Commands
 
 ```bash
-# Test gate decisions
-python test_llm_gate.py
-
 # Check API integration
 curl -X POST "http://localhost:8000/chat" \
   -H "Content-Type: application/json" \

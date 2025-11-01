@@ -158,14 +158,23 @@ def rag_retriever_agent(state: AgentState) -> AgentState:
         retrieve_tool = create_retrieve_tool(retriever)
         
         # Create ReAct agent with retrieval tool
-        llm = get_default_chat_model(model="gpt-4o-mini", temperature=0.1)
+        llm = get_default_chat_model(model="gpt-4.1-2025-04-14", temperature=0.3)
         agent = create_react_agent(llm, tools=[retrieve_tool])
         
         # Create an architect-focused query for retrieval with priority system
+        # Extract jurisdiction from user query
+        jurisdiction_hint = ""
+        user_query_lower = state.user_query.lower()
+        if any(keyword in user_query_lower for keyword in ["linz", "oberösterreich", "upper austria", "oö", "oo"]):
+            jurisdiction_hint = "\n\n## CRITICAL JURISDICTION FILTER:\n- The query mentions LINZ or UPPER AUSTRIA - ONLY use documents from '04. OBERÖSTERREICH' folder\n- DO NOT use Vienna (01.Wien) or federal documents if Upper Austria-specific documents exist\n- Upper Austria has its own Building Code and Building Technology Law that override general regulations"
+        elif any(keyword in user_query_lower for keyword in ["wien", "vienna"]):
+            jurisdiction_hint = "\n\n## CRITICAL JURISDICTION FILTER:\n- The query mentions VIENNA (WIEN) - ONLY use documents from '01.Wien' folder\n- DO NOT use Upper Austria or other state documents if Vienna-specific documents exist"
+        
         retrieval_query = f"""
         You are an assistant for architects and urban planners working with Austrian building regulations.
         
         User Query: "{state.user_query}"
+        {jurisdiction_hint}
         
         Search through the Austrian legal documents to find EXACT requirements, calculations, and formulas that architects need.
         
@@ -196,12 +205,26 @@ def rag_retriever_agent(state: AgentState) -> AgentState:
         
         Focus specifically on:
         - Numerical requirements (square meters, dimensions)
-        - Calculation formulas (e.g., 100 + 5 × 10 = 150)
+        - Calculation formulas with specific numbers (e.g., "100 m² + 10 m² per apartment", "100 + 5 × 10 = 150")
+        - Mathematical formulas that use variables (e.g., "base area + X per unit")
         - Specific legal standards and minimums
         - Precise measurements and technical specifications
-        - Mathematical formulas for area calculations
         
-        Use the retrieve_documents tool multiple times with different search terms to ensure you find all relevant calculations.
+        IMPORTANT: When searching, ALWAYS respect jurisdiction filters above. If the query mentions a specific location (e.g., "Linz", "Vienna"), prioritize documents from that jurisdiction's folder over other jurisdictions or general federal documents.
+        
+        **CRITICAL FOR CALCULATION QUERIES:**
+        If the user is asking for a calculation (e.g., "how many square meters", "calculate", "required area"), you MUST:
+        1. Search for documents containing calculation formulas with specific numbers
+        2. Look for phrases like "100 m²", "10 m² per", "je Wohnung", "pro Wohnung", "zuzüglich"
+        3. Find the exact formula text from the regulations
+        4. Extract ALL numerical components of the formula
+        5. If you find conflicting information (some saying "no fixed formula" and others with formulas), prioritize the formula with specific numbers
+        
+        Use the retrieve_documents tool multiple times with different search terms to ensure you find all relevant calculations:
+        - Search for: "Spielplatz" OR "playground" AND "Berechnung" OR "calculation" OR "Formel" OR "formula"
+        - Search for: "100 m²" OR "10 m²" AND "Wohnung" OR "apartment"
+        - Search for: Section numbers mentioned (e.g., "§ 11", "Section 11")
+        Make sure to search specifically for jurisdiction-appropriate documents first.
         
         Provide exact numbers, formulas, and legal requirements as written in the documents.
         If you find calculation formulas, include them exactly as they appear.

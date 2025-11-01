@@ -4,7 +4,7 @@ from normo_backend.utils import get_default_chat_model
 from normo_backend.utils.pdf_processor import get_available_pdfs
 from normo_backend.utils.trimer import extract_json
 
-llm = get_default_chat_model(model="gpt-4o-mini", temperature=0.2)
+llm = get_default_chat_model(model="gpt-4.1-2025-04-14", temperature=0.3)
 
 
 def pdf_selector_agent(state: AgentState) -> AgentState:

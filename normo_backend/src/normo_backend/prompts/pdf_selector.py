@@ -6,7 +6,21 @@ User Query: {user_query}
 Available PDFs in the system:
 {appendex_a}
 
-Your task is to select PDF documents that contain SPECIFIC CALCULATIONS, FORMULAS, and EXACT REQUIREMENTS for architectural planning.
+## CRITICAL JURISDICTION FILTERING:
+
+**IF the user query mentions a specific location, you MUST prioritize documents from that jurisdiction:**
+
+- **"Linz", "Oberösterreich", "Upper Austria", "OÖ"**: Select documents ONLY from "04. OBERÖSTERREICH" folder
+  - Upper Austria has its own Building Code and Building Technology Law
+  - DO NOT select Vienna documents for Upper Austria queries
+  
+- **"Vienna", "Wien"**: Select documents ONLY from "01.Wien" folder
+  - Vienna has its own Building Code and regulations
+  - DO NOT select Upper Austria documents for Vienna queries
+
+- **If no location mentioned**: Use federal-level documents or state documents as appropriate
+
+**Your task is to select PDF documents that contain SPECIFIC CALCULATIONS, FORMULAS, and EXACT REQUIREMENTS for architectural planning.**
 
 ## CRITICAL PRIORITY SYSTEM - FOLLOW THIS EXACT ORDER:
 

@@ -157,18 +157,6 @@ If using MongoDB, the system will:
 
 ## 🧪 Testing
 
-### Test LLM Gate
-```bash
-cd normo_backend
-uv run python test_llm_gate.py
-```
-
-### Test MongoDB Integration
-```bash
-cd normo_backend
-uv run python test_mongodb_integration.py
-```
-
 ### Test API Endpoints
 ```bash
 # Health check

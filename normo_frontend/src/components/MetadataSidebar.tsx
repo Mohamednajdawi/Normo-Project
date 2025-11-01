@@ -111,16 +111,6 @@ const MetadataSidebar: React.FC<MetadataSidebarProps> = ({ metadata, isVisible }
         >
           Query Analysis
         </Typography>
-        <Typography
-          variant="body2"
-          sx={{
-            color: '#b4b4b4',
-            textAlign: 'center',
-            lineHeight: 1.4,
-          }}
-        >
-          Extracted metadata from your legal query
-        </Typography>
       </Box>
 
       <Box sx={{ flex: 1, p: 2 }}>
@@ -222,28 +212,6 @@ const MetadataSidebar: React.FC<MetadataSidebarProps> = ({ metadata, isVisible }
           </>
         )}
 
-        {/* Usage hint */}
-        <Box sx={{ mt: 'auto', pt: 2 }}>
-          <Paper
-            sx={{
-              p: 2,
-              bgcolor: '#343541',
-              border: '1px solid #4d4d4f',
-            }}
-          >
-            <Typography
-              variant="caption"
-              sx={{
-                color: '#b4b4b4',
-                display: 'block',
-                textAlign: 'center',
-                lineHeight: 1.4,
-              }}
-            >
-              This metadata helps our AI understand the legal context of your query and select the most relevant Austrian documents.
-            </Typography>
-          </Paper>
-        </Box>
       </Box>
     </Paper>
   );

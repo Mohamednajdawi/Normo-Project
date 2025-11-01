@@ -101,17 +101,6 @@ const ChatInterface = forwardRef<ChatInterfaceRef>((props, ref) => {
         <Typography variant="h6" sx={{ color: '#ffffff', textAlign: 'center' }}>
           Normo Legal Assistant
         </Typography>
-        <Typography variant="body2" sx={{ color: '#b4b4b4', textAlign: 'center', mt: 0.5 }}>
-          {currentConversationId 
-            ? 'Continuing conversation - ask follow-up questions' 
-            : 'Ask about building codes, regulations, and architectural requirements'
-          }
-        </Typography>
-        {currentConversationId && (
-          <Typography variant="caption" sx={{ color: '#10a37f', textAlign: 'center', display: 'block', mt: 0.5 }}>
-            Conversation ID: {currentConversationId.substring(0, 8)}...
-          </Typography>
-        )}
       </Box>
 
       {/* Messages Area */}
@@ -123,12 +112,8 @@ const ChatInterface = forwardRef<ChatInterfaceRef>((props, ref) => {
       }}>
         {messages.length === 0 ? (
           <Container maxWidth="md" sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', py: 4 }}>
-            <Typography variant="h4" sx={{ color: '#ffffff', textAlign: 'center', mb: 3, fontWeight: 600 }}>
+            <Typography variant="h4" sx={{ color: '#ffffff', textAlign: 'center', mb: 4, fontWeight: 600 }}>
               Welcome to Normo Legal Assistant
-            </Typography>
-            <Typography variant="body1" sx={{ color: '#b4b4b4', textAlign: 'center', mb: 4, lineHeight: 1.6 }}>
-              Your AI-powered assistant for Austrian building regulations. Ask questions about playground requirements, 
-              building heights, construction standards, and more. Get exact calculations with legal citations.
             </Typography>
             
             <Typography variant="h6" sx={{ color: '#10a37f', mb: 2, textAlign: 'center' }}>
@@ -167,7 +152,7 @@ const ChatInterface = forwardRef<ChatInterfaceRef>((props, ref) => {
           <Box sx={{ display: 'flex', justifyContent: 'center', p: 2 }}>
             <CircularProgress size={20} sx={{ color: '#10a37f' }} />
             <Typography variant="body2" sx={{ color: '#b4b4b4', ml: 1 }}>
-              Analyzing Austrian legal documents...
+              Analyzing...
             </Typography>
           </Box>
         )}
@@ -199,7 +184,7 @@ const ChatInterface = forwardRef<ChatInterfaceRef>((props, ref) => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Ask about Austrian building regulations, playground requirements, building codes..."
+              placeholder="Ask about Austrian building regulations..."
               disabled={isLoading}
               sx={{
                 '& .MuiOutlinedInput-root': {
