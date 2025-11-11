@@ -48,3 +48,4 @@ class ChatResponse(BaseModel):
     message: ChatMessage
     conversation_id: Optional[str] = None
     source_citations: Optional[list[dict]] = None
+    meta_data: Optional[dict] = None

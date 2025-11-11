@@ -18,6 +18,7 @@ import {
   Description as DocumentIcon,
   Topic as SubjectIcon,
 } from '@mui/icons-material';
+import { useTranslation } from '../i18n/useTranslation';
 
 interface MetadataSidebarProps {
   metadata?: Record<string, string> | null;
@@ -25,19 +26,22 @@ interface MetadataSidebarProps {
 }
 
 const MetadataSidebar: React.FC<MetadataSidebarProps> = ({ metadata, isVisible }) => {
+  const { t } = useTranslation();
+  
   if (!isVisible || !metadata) {
     return null;
   }
 
   const getDisplayValue = (key: string, value: string) => {
     if (!value || value === 'unknown' || value === '') {
-      return 'Not specified';
+      return t('notSpecified');
     }
     return value;
   };
 
   const getChipColor = (value: string) => {
-    if (!value || value === 'unknown' || value === '' || value === 'Not specified') {
+    const notSpecified = t('notSpecified');
+    if (!value || value === 'unknown' || value === '' || value === notSpecified) {
       return 'default';
     }
     return 'primary';
@@ -46,35 +50,35 @@ const MetadataSidebar: React.FC<MetadataSidebarProps> = ({ metadata, isVisible }
   const metadataItems = [
     {
       key: 'country',
-      label: 'Country',
+      label: t('country'),
       icon: <CountryIcon />,
       value: getDisplayValue('country', metadata.country || ''),
       color: getChipColor(metadata.country || ''),
     },
     {
       key: 'state',
-      label: 'State/Region',
+      label: t('stateRegion'),
       icon: <StateIcon />,
       value: getDisplayValue('state', metadata.state || ''),
       color: getChipColor(metadata.state || ''),
     },
     {
       key: 'legal_domain',
-      label: 'Legal Domain',
+      label: t('legalDomain'),
       icon: <CategoryIcon />,
       value: getDisplayValue('legal_domain', metadata.legal_domain || ''),
       color: getChipColor(metadata.legal_domain || ''),
     },
     {
       key: 'document_type',
-      label: 'Document Type',
+      label: t('documentType'),
       icon: <DocumentIcon />,
       value: getDisplayValue('document_type', metadata.document_type || ''),
       color: getChipColor(metadata.document_type || ''),
     },
     {
       key: 'subject_area',
-      label: 'Subject Area',
+      label: t('subjectArea'),
       icon: <SubjectIcon />,
       value: getDisplayValue('subject_area', metadata.subject_area || ''),
       color: getChipColor(metadata.subject_area || ''),
@@ -109,7 +113,7 @@ const MetadataSidebar: React.FC<MetadataSidebarProps> = ({ metadata, isVisible }
             mb: 1,
           }}
         >
-          Query Analysis
+          {t('queryAnalysis')}
         </Typography>
         <Typography
           variant="body2"
@@ -119,7 +123,7 @@ const MetadataSidebar: React.FC<MetadataSidebarProps> = ({ metadata, isVisible }
             lineHeight: 1.4,
           }}
         >
-          Extracted metadata from your legal query
+          {t('extractedMetadata')}
         </Typography>
       </Box>
 
@@ -178,7 +182,7 @@ const MetadataSidebar: React.FC<MetadataSidebarProps> = ({ metadata, isVisible }
                 letterSpacing: '0.5px',
               }}
             >
-              Additional Fields
+              {t('additionalFields')}
             </Typography>
             <List sx={{ p: 0 }}>
               {customFields.map(([key, value], index) => (
@@ -240,7 +244,7 @@ const MetadataSidebar: React.FC<MetadataSidebarProps> = ({ metadata, isVisible }
                 lineHeight: 1.4,
               }}
             >
-              This metadata helps our AI understand the legal context of your query and select the most relevant Austrian documents.
+              {t('metadataHelpText')}
             </Typography>
           </Paper>
         </Box>

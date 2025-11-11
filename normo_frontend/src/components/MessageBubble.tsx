@@ -20,6 +20,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { ChatMessage } from '../types/api';
 import CitationsList from './CitationsList';
+import { useTranslation } from '../i18n/useTranslation';
 
 interface MessageBubbleProps {
   message: ChatMessage;
@@ -29,6 +30,7 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
   const [showCitations, setShowCitations] = useState(false);
   const isUser = message.role === 'user';
   const hasCitations = message.citations && message.citations.length > 0;
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -65,7 +67,7 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
             fontWeight: 500,
           }}
         >
-          {isUser ? 'You' : 'Normo Assistant'}
+          {isUser ? t('you') : t('assistant')}
         </Typography>
         <Typography
           variant="caption"
@@ -152,7 +154,7 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
             <Chip
               icon={<DocumentIcon />}
-              label={`${message.citations!.length} Source${message.citations!.length > 1 ? 's' : ''}`}
+              label={`${message.citations!.length} ${message.citations!.length > 1 ? t('sources') : t('source')}`}
               size="small"
               sx={{
                 bgcolor: '#2d2d30',
@@ -163,7 +165,7 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
             {message.citations!.some(c => c.calculations || c.area_measurements) && (
               <Chip
                 icon={<CalculateIcon />}
-                label="Contains Calculations"
+                label={t('containsCalculations')}
                 size="small"
                 sx={{
                   ml: 1,

@@ -66,6 +66,7 @@ export interface ChatResponse {
   };
   conversation_id?: string;
   source_citations?: SourceCitation[];
+  meta_data?: Record<string, string>;
 }
 
 // Legacy types for backward compatibility

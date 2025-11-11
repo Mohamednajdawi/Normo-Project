@@ -142,7 +142,8 @@ def chat(request: ChatRequest) -> ChatResponse:
         return ChatResponse(
             message=response_message,
             conversation_id=conversation_id,
-            source_citations=result_state.get("source_citations", [])
+            source_citations=result_state.get("source_citations", []),
+            meta_data=result_state.get("meta_data", {})
         )
     
     else:
@@ -175,7 +176,8 @@ def chat(request: ChatRequest) -> ChatResponse:
         return ChatResponse(
             message=response_message,
             conversation_id=conversation_id,
-            source_citations=[]
+            source_citations=[],
+            meta_data={"gate_decision": gate_decision}
         )
 
 

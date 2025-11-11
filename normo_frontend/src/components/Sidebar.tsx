@@ -11,6 +11,7 @@ import {
   Divider,
   Paper,
   Chip,
+  Avatar,
 } from '@mui/material';
 import {
   Add as AddIcon,
@@ -22,6 +23,7 @@ import {
 } from '@mui/icons-material';
 import { useConversation } from '../contexts/ConversationContext';
 import { ConversationListItem } from '../types/api';
+import { useTranslation } from '../i18n/useTranslation';
 
 const SIDEBAR_WIDTH = 260;
 
@@ -32,33 +34,34 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ onNewChat }) => {
   const { state, switchToConversation } = useConversation();
   const { conversations, currentConversationId } = state;
+  const { t } = useTranslation();
 
   const features = [
     {
       icon: <ArchitectureIcon />,
-      title: 'Austrian Building Codes',
-      description: 'Access comprehensive building regulations',
+      title: t('featureBuildingCodes'),
+      description: t('featureBuildingCodesDesc'),
     },
     {
       icon: <CalculateIcon />,
-      title: 'Area Calculations',
-      description: 'Get exact formulas and requirements',
+      title: t('featureAreaCalculations'),
+      description: t('featureAreaCalculationsDesc'),
     },
     {
       icon: <GavelIcon />,
-      title: 'Legal Citations',
-      description: 'Detailed source references with page numbers',
+      title: t('featureLegalCitations'),
+      description: t('featureLegalCitationsDesc'),
     },
     {
       icon: <DescriptionIcon />,
-      title: 'Real PDF Documents',
-      description: 'Query actual Austrian legal documents',
+      title: t('featurePdfDocuments'),
+      description: t('featurePdfDocumentsDesc'),
     },
   ];
 
   const formatConversationTitle = (conversation: ConversationListItem) => {
     if (!conversation) {
-      return 'New Conversation';
+      return t('newConversation');
     }
     
     // Use first_message from the list view
@@ -69,18 +72,18 @@ const Sidebar: React.FC<SidebarProps> = ({ onNewChat }) => {
         ? firstMessage.substring(0, 50) + '...'
         : firstMessage;
     }
-    return 'New Conversation';
+    return t('newConversation');
   };
 
   const formatDate = (dateString: string) => {
     if (!dateString) {
-      return 'Unknown';
+      return t('unknown');
     }
     
     try {
       const date = new Date(dateString);
       if (isNaN(date.getTime())) {
-        return 'Invalid Date';
+        return t('unknown');
       }
       
       const now = new Date();
@@ -94,7 +97,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onNewChat }) => {
         return date.toLocaleDateString([], { month: 'short', day: 'numeric' });
       }
     } catch (error) {
-      return 'Unknown';
+      return t('unknown');
     }
   };
 
@@ -131,8 +134,23 @@ const Sidebar: React.FC<SidebarProps> = ({ onNewChat }) => {
           }}
           fullWidth
         >
-          New Chat
+          {t('newChat')}
         </Button>
+
+        {/* Logo */}
+        <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+          <Avatar
+            src="/logo.jpg"
+            alt="Normo Logo"
+            sx={{
+              width: 80,
+              height: 80,
+              borderRadius: 2,
+              bgcolor: 'transparent',
+            }}
+            variant="rounded"
+          />
+        </Box>
 
         {/* Title */}
         <Typography
@@ -144,7 +162,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onNewChat }) => {
             textAlign: 'center',
           }}
         >
-          Normo Legal Assistant
+          {t('sidebarTitle')}
         </Typography>
 
         <Typography
@@ -156,7 +174,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onNewChat }) => {
             lineHeight: 1.4,
           }}
         >
-          AI-powered assistant for Austrian building regulations and architectural requirements
+          {t('sidebarDescription')}
         </Typography>
 
         <Divider sx={{ bgcolor: '#4d4d4f', mb: 2 }} />
@@ -175,7 +193,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onNewChat }) => {
                 letterSpacing: '0.5px',
               }}
             >
-              Recent Conversations
+              {t('recentConversations')}
             </Typography>
 
             <List sx={{ p: 0, mb: 2 }}>
@@ -224,7 +242,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onNewChat }) => {
                           {formatDate(conversation.updated_at)}
                         </Typography>
                         <Chip
-                          label={`${conversation.message_count || 0} msgs`}
+                          label={`${conversation.message_count || 0} ${t('msgs')}`}
                           size="small"
                           sx={{
                             height: 16,
@@ -259,7 +277,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onNewChat }) => {
             letterSpacing: '0.5px',
           }}
         >
-          Features
+          {t('features')}
         </Typography>
 
         <List sx={{ p: 0 }}>
@@ -312,7 +330,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onNewChat }) => {
                 lineHeight: 1.4,
               }}
             >
-              Ask questions about Austrian building codes, playground requirements, construction regulations, and more.
+              {t('askQuestionsPrompt')}
             </Typography>
           </Paper>
         </Box>

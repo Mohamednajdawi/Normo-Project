@@ -172,6 +172,7 @@ export const ConversationProvider: React.FC<ConversationProviderProps> = ({ chil
         role: 'assistant',
         timestamp: new Date(response.message.timestamp),
         citations: response.source_citations,
+        metadata: response.meta_data,
       };
       dispatch({ type: 'ADD_MESSAGE', payload: assistantMessage });
 

@@ -16,6 +16,7 @@ import {
   PageviewOutlined as PageIcon,
 } from '@mui/icons-material';
 import { SourceCitation } from '../types/api';
+import { useTranslation } from '../i18n/useTranslation';
 
 interface CitationsListProps {
   citations: SourceCitation[];
@@ -69,6 +70,8 @@ const openPdfInNewWindow = (pdfName: string): void => {
 };
 
 const CitationsList: React.FC<CitationsListProps> = ({ citations }) => {
+  const { t } = useTranslation();
+  
   return (
     <Box sx={{ p: 2 }}>
       <Typography
@@ -83,7 +86,7 @@ const CitationsList: React.FC<CitationsListProps> = ({ citations }) => {
         }}
       >
         <DocumentIcon fontSize="small" />
-        Legal Sources & Citations
+        {t('legalSourcesCitations')}
       </Typography>
 
       <List sx={{ p: 0 }}>
@@ -127,7 +130,7 @@ const CitationsList: React.FC<CitationsListProps> = ({ citations }) => {
                     <Box sx={{ display: 'flex', gap: 1, mt: 0.5, flexWrap: 'wrap' }}>
                       <Chip
                         icon={<PageIcon />}
-                        label={`Page ${citation.page}`}
+                        label={`${t('page')} ${citation.page}`}
                         size="small"
                         sx={{
                           bgcolor: '#10a37f',
@@ -137,7 +140,7 @@ const CitationsList: React.FC<CitationsListProps> = ({ citations }) => {
                         }}
                       />
                       <Chip
-                        label={`Section ${citation.paragraph}`}
+                        label={`${t('section')} ${citation.paragraph}`}
                         size="small"
                         sx={{
                           bgcolor: '#444654',
@@ -181,7 +184,7 @@ const CitationsList: React.FC<CitationsListProps> = ({ citations }) => {
                         }}
                       >
                         <CalculateIcon fontSize="small" />
-                        Calculations Found:
+                        {t('calculationsFound')}
                       </Typography>
                       <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
                         {citation.calculations.map((calc, calcIndex) => (
@@ -215,7 +218,7 @@ const CitationsList: React.FC<CitationsListProps> = ({ citations }) => {
                         }}
                       >
                         <RulerIcon fontSize="small" />
-                        Area Measurements:
+                        {t('areaMeasurements')}
                       </Typography>
                       <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
                         {citation.area_measurements.map((measurement, measureIndex) => (
@@ -268,7 +271,7 @@ const CitationsList: React.FC<CitationsListProps> = ({ citations }) => {
           fontStyle: 'italic',
         }}
       >
-        All citations are from official Austrian legal documents
+        {t('allCitationsOfficial')}
       </Typography>
     </Box>
   );
